@@ -9,6 +9,9 @@ python:
     - pypy3
 services:
     - docker
+arch:
+  - amd64
+  - ppc64le
 
 cache:
     apt: true
