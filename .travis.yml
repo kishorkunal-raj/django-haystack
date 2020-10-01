@@ -61,8 +61,7 @@ after_success:
 
 env:
     global:
-        - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-        - if [[ "${TRAVIS_CPU_ARCH}" == "ppc64le" ]]; then export JAVA_HOME=$HOME/openjdk11; fi
+        - JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64;/usr/lib/jvm/java-8-openjdk-ppc64le
     jobs:
         - DJANGO_VERSION=">=2.2,<3.0" VERSION_ES=">=1,<2"
         - DJANGO_VERSION=">=3.0,<3.1" VERSION_ES=">=1,<2"
