@@ -31,7 +31,7 @@ addons:
 
 before_install:
     - mkdir -p $HOME/download-cache
-    - if [[ "${TRAVIS_CPU_ARCH}" == "ppc64le" ]]; then apt-get install -y openjdk-8-jdk; fi
+    - if [[ "${TRAVIS_CPU_ARCH}" == "ppc64le" ]]; then sudo apt-get install -y openjdk-8-jdk; fi
     - >
         if [[ $VERSION_ES == '>=2,<3' ]];
         then
